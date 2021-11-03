@@ -1,0 +1,357 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled0.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyNCOTXtRg/hOc25iAUdFoE8",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/bryanpioloEspanol/linear/blob/main/espanol%20demo\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "lGgSdYYWnfWb",
+        "outputId": "f523902c-ab82-4720-dd1c-38f32b6507e9"
+      },
+      "source": [
+        "import numpy as np\n",
+        "A=np.array([[4,3],[-5,9]]) #creation of matrix A\n",
+        "print (A)\n",
+        "inv_A=np.linalg.inv(A)\n",
+        "print(inv_A)"
+      ],
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[ 4  3]\n",
+            " [-5  9]]\n",
+            "[[ 0.17647059 -0.05882353]\n",
+            " [ 0.09803922  0.07843137]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CeNSFgC4o1Sc",
+        "outputId": "970f3bd6-45fa-48eb-bb47-6e53119ac2a4"
+      },
+      "source": [
+        "B=np.array([[20],[26]])\n",
+        "print(B)"
+      ],
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[20]\n",
+            " [26]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Rdoa4xeCpJY9",
+        "outputId": "fe2fc712-c9e1-4a96-956c-44f8fe74cc24"
+      },
+      "source": [
+        "X=np.linalg.inv(A).dot(B)\n",
+        "print(X)"
+      ],
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[2.]\n",
+            " [4.]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "eqVjBCjKTzJ9"
+      },
+      "source": [
+        "# **aplication**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5y8eqIUAT6sT",
+        "outputId": "582ecf35-71da-4155-a208-f3d688c031fe"
+      },
+      "source": [
+        "import numpy as np\n",
+        "A=np.array([[20,10],[17,22]]) #creation of matrix A\n",
+        "print(A)\n",
+        "inv_A=np.linalg.inv(A) #creation of inverse of matrix A\n",
+        "print(inv_A)\n"
+      ],
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[20 10]\n",
+            " [17 22]]\n",
+            "[[ 0.08148148 -0.03703704]\n",
+            " [-0.06296296  0.07407407]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "XdW_ww3fUiVk",
+        "outputId": "e869a1d9-a801-43d8-da88-1a0b6f93a63e"
+      },
+      "source": [
+        "B=np.array([[350],[500]])\n",
+        "print(B)"
+      ],
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[350]\n",
+            " [500]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "kfhO8AUXUicn",
+        "outputId": "510301e0-4040-41aa-f611-52d606f6cd39"
+      },
+      "source": [
+        "X=np.dot(inv_A,B)\n",
+        "print(X)\n"
+      ],
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[10.]\n",
+            " [15.]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "_uwYiMJ4VKMa"
+      },
+      "source": [
+        "# ***to check if the answer is correct***"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "m4LCb12RVbxf",
+        "outputId": "2b6fa738-9e98-4e27-f909-0d3f86c263e0"
+      },
+      "source": [
+        "B=np.dot(A,X)\n",
+        "print(B)"
+      ],
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[350.]\n",
+            " [500.]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "39JI5uwgXe24"
+      },
+      "source": [
+        "# ***solution for the given linear Equations***"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ddiqUCVDXqyv",
+        "outputId": "d6827baa-4d2e-4396-a54c-62ae68d8a72b"
+      },
+      "source": [
+        "import numpy as np\n",
+        "A=np.array([[[4,3,2],[-2,2,3],[3,-5,2]]]) #creation of matrix A\n",
+        "print(A)\n",
+        "inv_A=np.linalg.inv(A)\n",
+        "print(inv_A)"
+      ],
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[[ 4  3  2]\n",
+            "  [-2  2  3]\n",
+            "  [ 3 -5  2]]]\n",
+            "[[[ 0.15447154 -0.1300813   0.04065041]\n",
+            "  [ 0.10569106  0.01626016 -0.1300813 ]\n",
+            "  [ 0.03252033  0.23577236  0.11382114]]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "sGC9_IohYYTa",
+        "outputId": "e7f19cfa-ed48-4033-bb34-b3b9cc6a9444"
+      },
+      "source": [
+        "B=np.array([[[25],[-10],[4]]])\n",
+        "print(B)"
+      ],
+      "execution_count": 16,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[[ 25]\n",
+            "  [-10]\n",
+            "  [  4]]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Jx0tmo0VYpP1",
+        "outputId": "32181c4d-5c5e-4c37-e113-81b136f5605f"
+      },
+      "source": [
+        "X=np.linalg.inv(A).dot(B)\n",
+        "print(X)"
+      ],
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[[[ 5.32520325]]\n",
+            "\n",
+            "  [[ 1.95934959]]\n",
+            "\n",
+            "  [[-1.08943089]]]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "LmRamasvZDwa",
+        "outputId": "1934e7a2-ff7d-4bf8-b213-0ae51bfa2560"
+      },
+      "source": [
+        "X=np.dot(inv_A,B)\n",
+        "print(X)"
+      ],
+      "execution_count": 18,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[[[ 5.32520325]]\n",
+            "\n",
+            "  [[ 1.95934959]]\n",
+            "\n",
+            "  [[-1.08943089]]]]\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
